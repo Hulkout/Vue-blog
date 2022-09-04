@@ -1,0 +1,55 @@
+@import "./base.less";
+
+html,body,#app{ //单独app100%不生效，你需要给这个元素的所有父元素的高度设定一个有效值
+  height: 100%;
+}
+body{
+  //字体大小为14px。行高为1.6倍。字体为arial
+  margin: 0;
+  font: 14px/1.6 Arial,"Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.el-button {
+  color: green;
+  border: 1px solid @themeLighterColor;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.el-button.el-button--medium{
+  font-size: 13px;
+  padding: 0 8px;
+  font-weight: normal;
+  line-height: 28px;
+}
+
+
+.el-button:hover {
+  color: #fff;
+  background-color: @themeLighterColor;
+}
+
+input {
+  line-height: 40px;
+  border: 1px solid #eaeaea;
+  padding: 0 10px;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus {
+  border-color: @themeLighterColor;
+}
+
+.el-input.is-active .el-input__inner, .el-input__inner:focus, .el-textarea__inner:focus {
+  border-color: @themeLighterColor;
+}
+
+
+
+
+a {
+  text-decoration: none;//去掉下划线
+  color: #333;
+}
+
+
+

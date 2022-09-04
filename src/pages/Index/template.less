@@ -1,5 +1,47 @@
 
 @import "../../assets/base.less";
-p{
-  color: @themeColor;
+
+#index{
+  .item{
+    display: grid;
+    grid: auto auto / 80px 1fr; //行高自动 列宽80 1份
+    margin: 20px 0;
+    .avatar{
+      grid-column: 1/2;//列的第一根开始 到第二根
+      grid-row:1/span2 ; //第一个线跨越两根 写3也行
+      justify-self: center;//水平居中
+      margin-left: 0px;
+      text-align: center;//垂直居中
+      //内部元素垂直 对齐 align-self: center;
+      img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+      figcaption{
+        font-size: 12px;
+        color: @textLighterColor;
+      }
+    }
+    h3{
+      grid-column: 2;// 2/3
+      grid-row: 1; // 1/2也行
+      &>span{
+        color: @textLighterColor;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+    p{
+      grid-column: 2;
+      grid-row: 2;
+      margin-top:0 ;
+    }
+  }
+
+.pagination{
+  display: grid;
+  justify-items: center;
+  margin-bottom: 30px;
+}
 }
